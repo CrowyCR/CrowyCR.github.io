@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyNinja - Тренажёр слепой печати</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="image-with-curved-text"> 
+
+
+<div class="container"> 
+   <img src="img/logo.jpg" alt="Логотип" class="logo">
+    <input type="text" id="myInput" name="myInput">
+    <div id="wordDisplay"></div> 
+
+    <div id="wordForm">
+        <input type="text" id="newWord" placeholder="Введите новое слово">
+        <button onclick="addWord()">Добавить</button>
+    </div>
+
+    <div id="wordList"></div>
+
+    <div class="keyboard">
+        <div class="keyboard-row">
+            <button class="key" data-key="">ё</button>
+            <button class="key" data-key="49">1</button>
+            <button class="key" data-key="50">2</button>
+            <button class="key" data-key="51">3</button>
+            <button class="key" data-key="52">4</button>
+            <button class="key" data-key="53">5</button>
+            <button class="key" data-key="54">6</button>
+            <button class="key" data-key="55">7</button>
+            <button class="key" data-key="56">8</button>
+            <button class="key" data-key="57">9</button>
+            <button class="key" data-key="48">0</button>
+            <button class="key" data-key="189">-</button>
+            <button class="key" data-key="187">+</button>
+            <button class="key" data-key="8">&LeftArrow;</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" data-key="9">Tab</button>
+            <button class="key" data-key="81">й</button>
+            <button class="key" data-key="87">ц</button>
+            <button class="key" data-key="69">у</button>
+            <button class="key" data-key="82">к</button>
+            <button class="key" data-key="84">е</button>
+            <button class="key" data-key="89">н</button>
+            <button class="key" data-key="85">г</button>
+            <button class="key" data-key="73">ш</button>
+            <button class="key" data-key="79">щ</button>
+            <button class="key" data-key="80">з</button>
+            <button class="key" data-key="219">х</button>
+            <button class="key" data-key="221">ъ</button>
+            <button class="key" data-key="220">\|/</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" data-key="20">CapsLk</button>
+            <button class="key" data-key="65">ф</button>
+            <button class="key" data-key="83">ы</button>
+            <button class="key" data-key="68">в</button>
+            <button class="key" data-key="70">а</button>
+            <button class="key" data-key="71">п</button>
+            <button class="key" data-key="72">р</button>
+            <button class="key" data-key="74">о</button>
+            <button class="key" data-key="75">л</button>
+            <button class="key" data-key="76">д</button>
+            <button class="key" data-key="170">ж</button>
+            <button class="key" data-key="186">э</button>
+            <button class="key" data-key="13">Enter</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" data-key="16">Shift</button>
+            <button class="key" data-key="90">я</button>
+            <button class="key" data-key="88">ч</button>
+            <button class="key" data-key="67">с</button>
+            <button class="key" data-key="86">м</button>
+            <button class="key" data-key="66">и</button>
+            <button class="key" data-key="78">т</button>
+            <button class="key" data-key="77">ь</button>
+            <button class="key" data-key="188">б</button>
+            <button class="key" data-key="190">ю</button>
+            <button class="key" data-key="191">.</button>
+            <button class="key" data-key="16">Shift</button>
+            <button class="key" data-key="38">&uarr;</button>
+            <button class="key" data-key="13">&crarr;</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" data-key="17">Ctrl</button>
+            <button class="key" data-key="91">Win</button>
+            <button class="key" data-key="18">Alt</button>
+            <button class="space-button" data-key="32"></button>
+            <button class="key" data-key="18">Alt</button>
+            <button class="key" data-key="93">cm</button>
+            <button class="key" data-key="37">&larr;</button>
+            <button class="key" data-key="40">&darr;</button>
+            <button class="key" data-key="39">&rarr;</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="code.js"></script>
+</body>
+</html>
