@@ -1,0 +1,148 @@
+/* Основные стили для всей страницы */
+body {
+    margin: 0; /* Убираем отступы по умолчанию */
+    background-color: rgb(37, 37, 37); /* Темный фон страницы */
+    color: #fff; /* Белый цвет текста для всего документа */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Шрифтовая гарнитура */
+}
+
+/* Стили для основного контейнера */
+.container {
+    display: flex; /* Включаем flex-разметку */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    justify-content: flex-start; /* Выравнивание по верхнему краю */
+    align-items: center; /* Центрирование по горизонтали */
+    min-height: 100vh; /* Минимальная высота - на весь экран */
+    border: 1px solid #4e5563; /* Граница контейнера */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учет padding в общей ширине */
+    position: relative; /* Относительное позиционирование */
+}
+
+/* Общие стили для инпута, клавиш и пробела */
+#myInput,
+.key,
+.space-button {
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень элементов */
+}
+
+/* Стили конкретно для поля ввода */
+#myInput {
+    width: 700px; /* Ширина поля */
+    margin-bottom: 20px; /* Отступ снизу */
+    padding: 8px; /* Внутренние отступы */
+    border: 1px solid #4a525f; /* Цвет границы */
+    font-size: 16px; /* Размер шрифта */
+    background-color: #fff; /* Белый фон */
+    color: #000000; /* Черный текст */
+}
+
+/* Стили для placeholder в поле ввода */
+#myInput::placeholder {
+    color: #ccc; /* Серый цвет текста-подсказки */
+}
+
+/* Стили для клавиатуры */
+.keyboard {
+    display: flex; /* Flex-разметка */
+    align-items: center; /* Центрирование по вертикали */
+    flex-direction: column; /* Расположение в колонку */
+    color: #3d3c3c; /* Цвет текста клавиш */
+}
+
+/* Стили для ряда клавиш */
+.keyboard-row {
+    display: flex; /* Flex-разметка для ряда */
+    justify-content: center; /* Центрирование по горизонтали */
+}
+
+/* Стили для обычных клавиш */
+.key {
+    background-color: #f0f0f0; /* Светло-серый фон */
+    border: 1px solid #ccc; /* Граница */
+    padding: 8px 12px; /* Внутренние отступы */
+    cursor: default; /* Курсор по умолчанию */
+    user-select: none; /* Запрет выделения текста */
+    margin: 2px; /* Внешние отступы */
+}
+
+/* Стили для клавиши пробела */
+.space-button {
+    background-color: #f0f0f0; /* Светло-серый фон */
+    border: 1px solid #ccc; /* Граница */
+    padding: 0; /* Нет внутренних отступов */
+    cursor: default; /* Курсор по умолчанию */
+    user-select: none; /* Запрет выделения текста */
+    width: 200px; /* Фиксированная ширина */
+    height: 30px; /* Фиксированная высота */
+    text-align: center; /* Центрирование текста */
+    margin: 2px; /* Внешние отступы */
+}
+
+/* Стили для активных клавиш */
+.key.active,
+.space-button.active {
+    background-color: #7a8494; /* Цвет фона при активации */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Тень при активации */
+    font-size: 1.1em; /* Увеличенный размер шрифта */
+}
+
+/* Стили для правильно набранных символов */
+#wordDisplay span.correct {
+    color: #98c379; /* Зеленый цвет для правильных символов */
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+}
+
+/* Стили для формы добавления слов */
+#wordForm {
+    display: flex; /* Flex-разметка */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    margin-top: 20px; /* Отступ сверху */
+    background-color: #4a525f; /* Цвет фона */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Стили для инпута в форме */
+#wordForm input[type="text"] {
+    padding: 8px; /* Внутренние отступы */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Закругленные углы */
+    margin-right: 10px; /* Отступ справа */
+    width: 200px; /* Ширина поля */
+}
+
+/* Стили для кнопки в форме */
+#wordForm button {
+    background-color: #616a7a; /* Цвет фона */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границы */
+    padding: 8px 12px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+/* Стили для логотипа (вариант 1) */
+.logo {   
+    float: left; /* Обтекание текстом справа */
+    width: 200px; /* Ширина */
+    height: 200px; /* Высота */
+    border-radius: 50%; /* Круглая форма */
+    margin-right: 20px; /* Отступ справа */
+    shape-outside: circle(50%); /* Обтекание текстом по кругу */
+    object-fit: cover; /* Заполнение области с сохранением пропорций */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень */
+}
+
+/* Стили для логотипа (вариант 2) */
+.round-image {
+    width: 200px; /* Ширина */
+    height: 200px; /* Высота */
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Заполнение области с сохранением пропорций */
+    border: 3px solid #fff; /* Белая рамка */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Тень */
+}
